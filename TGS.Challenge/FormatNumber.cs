@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace TGS.Challenge
 {
@@ -26,7 +27,11 @@ namespace TGS.Challenge
     {
         public string Format(int value)
         {
-            return string.Empty;
+            if (value < 0 || value >= 1000000001)
+                throw new ArgumentOutOfRangeException();
+
+            var result = string.Format(CultureInfo.InvariantCulture, "{0:N0}",value);
+            return result;
         }
     }
 }
