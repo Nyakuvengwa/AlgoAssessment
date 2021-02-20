@@ -9,7 +9,6 @@ tests for the implementation.
 * Implement your solution to the challenges & run the unit tests to see if the solution works
 * Please consider your git history as this will be reviewed
 * Commit & push code regularly
-* Once complete, please send a link to your repository to tim@geminisolution.co.za and CC: elrika@geminisolution.co.za.
 
 # Algo Assessment
 This repository consists of 4 challenges, but you only need to choose 3 that you would like to complete.
