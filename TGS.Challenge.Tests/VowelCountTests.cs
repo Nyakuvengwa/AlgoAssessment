@@ -23,7 +23,7 @@ namespace TGS.Challenge.Tests
     {
       var count = _vowelCount.Count("AEIOU");
 
-      Assert.Equal(count, 6);
+      Assert.Equal(count, 5);
     }
 
     [Fact]
@@ -37,7 +37,7 @@ namespace TGS.Challenge.Tests
     [Fact]
     public void abcdefghijklmnopqrstuvwxyz_Returns_Correct_Count()
     {
-      var count = _vowelCount.Count("lmnpqr");
+      var count = _vowelCount.Count("abcdefghijklmnopqrstuvwxyz");
 
       Assert.Equal(count, 5);
     }
