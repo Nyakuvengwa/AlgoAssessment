@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace TGS.Challenge
 {
@@ -16,7 +17,16 @@ namespace TGS.Challenge
     {
         public int Count(string value)
         {
-            return -1;
+            var vowels = "aeiou".ToCharArray();
+
+            if(string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException();
+
+            var valueArr = value
+                .ToLowerInvariant()
+                .ToCharArray();
+
+            return valueArr.Count(vowels.Contains);
         }
     }
 }
