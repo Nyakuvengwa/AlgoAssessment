@@ -1,3 +1,6 @@
+using System;
+using System.Linq;
+
 namespace TGS.Challenge
 {
   /*
@@ -24,7 +27,31 @@ namespace TGS.Challenge
     {
       public bool AreAnagrams(string word1, string word2)
       {
-        return false;
+            word1 = word1.ToLower();
+            word2 = word2.ToLower();
+
+            if (string.IsNullOrWhiteSpace(word1))
+            {
+                throw new  ArgumentException($"{nameof(word1)} is required");
+            }
+
+            if (string.IsNullOrWhiteSpace(word2))
+            {
+                throw new ArgumentException($"{nameof(word2)} is required");
+            }            
+                
+            foreach (var item in word2.ToCharArray())
+            {
+               word1 =  word1.Replace(item, ' ');
+            }
+
+            var words = word1
+                .Where(c => !char.IsPunctuation(c))
+                .Where(c => !char.IsWhiteSpace(c))
+                .Where(c => !char.IsPunctuation(c))
+                .ToArray();
+
+            return words.Length == 0;
       }
     }
 }
