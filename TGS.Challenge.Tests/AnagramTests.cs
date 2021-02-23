@@ -35,7 +35,7 @@ namespace TGS.Challenge.Tests
     [Fact]
     public void Funeral_IsAnagram_Reel_fun()
     {
-      var result = _anagram.AreAnagrams("Funeral", "Reel fun");
+      var result = _anagram.AreAnagrams("Funeral", "Real fun");
 
       Assert.True(result);
     }
